@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>必买大牌</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="fonts/iconfont.min.css">
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px'
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h2><span><img src="img/h-l.png" alt=""></span>必买大牌<span><img src="img/h-r.png" alt=""></span></h2>
+        </header>
+        <main class="main two">
+
+        </main>
+        <footer class="footer">
+            <ul>
+                <li>
+                    <p> <i class="icon iconfont icon-tianmao2"></i></p>主会场
+                </li>
+                <li>
+                    <p><i class="icon iconfont icon-fenlei-xuanzhong"></i></p>全部会场
+                </li>
+                <li>
+                    <p> <i class="icon iconfont icon-zixun"></i></p>抢5折卷
+                </li>
+                <li>
+                    <p> <i class="icon iconfont icon-dazhongdianping"></i></p>榜单会场
+                </li>
+                <li>
+                    <p> <i class="icon iconfont icon-icongerenzhongxin-01"></i></p>我的618
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script id="tpl" type="text/x-handlebars-template">
+        {{#each list}}
+        <div>
+            <img src="{{img}}" alt="">
+            <p>{{title}}</p>
+        </div>
+        {{/each}}
+    </script>
+
+    <script>
+        require(['js/main.js'], function() {
+            require('index')
+        })
+    </script>
+</body>
+
+</html>
