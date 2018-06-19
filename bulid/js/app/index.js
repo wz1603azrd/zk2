@@ -1,0 +1,1 @@
+require(["jquery","render"],function(r){r.ajax({url:"/api/data",dataType:"json",success:function(r){render("#tpl","#warp",r)},ereror:function(r){console.warn(r)}})});

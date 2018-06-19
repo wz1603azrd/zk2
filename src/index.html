@@ -18,7 +18,7 @@
         <header class="header">
             <h2><span><img src="img/h-l.png" alt=""></span>必买大牌<span><img src="img/h-r.png" alt=""></span></h2>
         </header>
-        <main class="main two">
+        <main class="main two" id="wrap">
 
         </main>
         <footer class="footer">
@@ -41,6 +41,7 @@
             </ul>
         </footer>
     </div>
+
     <script id="tpl" type="text/x-handlebars-template">
         {{#each list}}
         <div>
@@ -49,9 +50,9 @@
         </div>
         {{/each}}
     </script>
-
+    <script src="js/libs/require.js"></script>
     <script>
-        require(['js/main.js'], function() {
+        require(['js/main'], function() {
             require('index')
         })
     </script>

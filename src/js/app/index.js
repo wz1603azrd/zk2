@@ -1,9 +1,9 @@
-require(['jquery'], function($) {
+require(['jquery', 'render'], function($) {
     $.ajax({
         url: '/api/data',
         dataType: 'json',
         success: function(res) {
-            console.log(res)
+            render('#tpl', '#warp', res)
         },
         ereror: function(err) {
             console.warn(err)

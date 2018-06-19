@@ -7,8 +7,9 @@ var url = require('url');
 var fs = require('fs');
 //压缩js
 gulp.task('minjs', function() {
-    gulp.src('src/js/**/*.js')
-        .pipe()
+    gulp.src('src/js/**/*.js', )
+        .pipe(uglify())
+        .pipe(gulp.dest('bulid/js'))
 });
 //起服务
 gulp.task('server', function() {
@@ -28,4 +29,5 @@ gulp.task('server', function() {
                 }
             }
         }))
-})
+});
+gulp.task("default", ['minjs', 'server'])
